@@ -15,7 +15,7 @@ import java.util.Map;
 @RestController("/")
 public class TestController {
 
-    @RequestMapping(value = "/data.json")
+    @RequestMapping(value = "/data.json",method = {RequestMethod.POST})
     public List bookById() {
         List resultList=new ArrayList();
         Map resultMap = new HashMap<>();
@@ -43,7 +43,7 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/creditByName", method = {RequestMethod.GET})
+    @RequestMapping(value = "/creditByName", method = {RequestMethod.POST})
     public int getCrditByName(String name) {
         if("计算机编程基础".equals(name)){
             return 4;
