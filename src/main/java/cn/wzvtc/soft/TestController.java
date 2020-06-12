@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Map;
 
 
-@CrossOrigin(origins = "http://127.0.0.1:5500")
+@CrossOrigin(origins = "http://127.0.0.1:5501")
 @RestController("/")
 public class TestController {
 
-    @RequestMapping(value = "/data.json",method = {RequestMethod.POST})
+    @RequestMapping(value = "/data.json")
     public List bookById() {
         List resultList=new ArrayList();
         Map resultMap = new HashMap<>();
@@ -43,7 +43,7 @@ public class TestController {
     }
 
 
-    @RequestMapping(value = "/creditByName", method = {RequestMethod.POST})
+    @RequestMapping(value = "/creditByName")
     public int getCrditByName(String name) {
         if("计算机编程基础".equals(name)){
             return 4;
