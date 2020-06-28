@@ -33,7 +33,7 @@ public class HttpSessionConfig extends AbstractHttpSessionApplicationInitializer
     @Bean public CookieSerializer httpSessionIdResolver(){
         DefaultCookieSerializer cookieSerializer = new DefaultCookieSerializer();                            cookieSerializer.setCookieName("token");
         cookieSerializer.setUseHttpOnlyCookie(false);
-        cookieSerializer.setSameSite(null);
+//        cookieSerializer.setSameSite(null);
         return cookieSerializer;
 
     }}
